@@ -1,0 +1,71 @@
+# Type A
+order = random.sample((0, 1, 2), 3)
+changed_dim = random.choice((0, 1))
+
+id_left = "15" + random.choice(("2", "3", "4"))
+id_right = list(id_left)
+id_right[changed_dim] = str(6 - int(id_left[changed_dim]))
+id_right = "".join(id_right)
+
+id_left = str(id_left[order[0]]) + str(id_left[order[1]]) + str(id_left[order[2]])
+id_right = str(id_right[order[0]]) + str(id_right[order[1]]) + str(id_right[order[2]])
+
+# Type B
+order = random.sample((0, 1, 2), 3)
+n_pos_changes = random.choice((1, 2))
+
+dim_changes = [1] * n_pos_changes + [-1] * (3-n_pos_changes)
+order_dim_changes = random.sample((0, 1, 2), 3)
+dim_changes = list((dim_changes[order_dim_changes[0]], dim_changes[order_dim_changes[1]], dim_changes[order_dim_changes[2]]))
+
+id_left = random.choice(("2", "3", "4")) + random.choice(("2", "3", "4")) + random.choice(("2", "3", "4"))
+id_right = list(id_left)
+for i in [0, 1, 2]:
+    id_right[i] = str(dim_changes[i] + int(id_left[i]))
+id_right = "".join(id_right)
+
+id_left = str(id_left[order[0]]) + str(id_left[order[1]]) + str(id_left[order[2]])
+id_right = str(id_right[order[0]]) + str(id_right[order[1]]) + str(id_right[order[2]])
+# print dim_changes, id_left, id_right
+
+# Type C
+order = random.sample((0, 1, 2), 3)
+
+id_left = "15" + random.choice(("2", "3", "4"))
+id_right = list(id_left)
+id_right[0:2] = str(66 - int(id_left[0:2]))
+id_right = "".join(id_right)
+# print order, id_left, id_right
+
+id_left = str(id_left[order[0]]) + str(id_left[order[1]]) + str(id_left[order[2]])
+id_right = str(id_right[order[0]]) + str(id_right[order[1]]) + str(id_right[order[2]])
+# print id_left, id_right
+
+# Type D
+order = random.sample((0, 1, 2), 3)
+
+dim_changes = [1, -1, 0]
+order_dim_changes = random.sample((0, 1), 2)
+dim_changes = list((dim_changes[order_dim_changes[0]], dim_changes[order_dim_changes[1]], dim_changes[2]))
+
+id_left = random.choice(("2", "3", "4")) + random.choice(("2", "3", "4")) + random.choice(("1", "2", "3", "4", "5"))
+id_right = list(id_left)
+for i in [0, 1]:
+    id_right[i] = str(dim_changes[i] + int(id_left[i]))
+id_right = "".join(id_right)
+
+id_left = str(id_left[order[0]]) + str(id_left[order[1]]) + str(id_left[order[2]])
+id_right = str(id_right[order[0]]) + str(id_right[order[1]]) + str(id_right[order[2]])
+# print dim_changes, id_left, id_right
+
+# Type I
+id_right = id_left = "".join(random.choice(("1", "2", "3", "4", "5")) + random.choice(("1", "2", "3", "4", "5")) + random.choice(("1", "2", "3", "4", "5")))
+# print id_left, id_right
+
+# Type V
+diff = random.choice((111, 333, 444))
+id_left = "111"
+id_right = list(id_left)
+id_right = str(diff + int(id_left))
+id_right = "".join(id_right)
+print id_left, id_right
