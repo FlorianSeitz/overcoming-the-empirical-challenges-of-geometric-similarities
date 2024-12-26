@@ -1,4 +1,4 @@
-# Testing Three Coping Strategies for Time Pressure in Categorizations and Similarity Judgments
+# Overcoming the Empirical Challenges of Geometric Similarities: A Model-Based Review
 
 ### Contributing Authors
 Seitz, Florian I.
@@ -10,4 +10,4 @@ Similarity is fundamental to higher-order cognition, including object recognitio
 ---
 
 ### Funding
-This work was supported by a grant of the Swiss National Science Foundation (\href{https://data.snf.ch/grants/grant/195389}{P0BSP1\_195389}) provided to Florian I. Seitz..
+This work was supported by a grant of the Swiss National Science Foundation (https://data.snf.ch/grants/grant/195389) provided to Florian I. Seitz..
